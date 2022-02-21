@@ -1,6 +1,6 @@
 function navHeadBandDisplay() {
   const formHeadBand = document.getElementById("formHeadBand");
-  const navButtons = document.querySelectorAll("formHeadBand + label");
+  const navButtons = document.getElementsByClassName("labels");
   const navStep = [];
   const radioStep = [];
 
@@ -10,7 +10,7 @@ function navHeadBandDisplay() {
     formHeadBand.innerHTML += `<input type="radio" id="step${i}" name="steps"></input>
   <label for="step${i}" id="label${i}" class="labels">étape ${i}</label>`;
     navStep[i] = document.getElementById(`label${i}`);
-    console.log("navStep" + i + " = " + navStep[i]);
+    // console.log("navStep" + i + " = " + navStep[i]);
     radioStep[i] = document.getElementById(`step${i}`);
     // console.log("radioStep" + i + " = " + radioStep[i]);
 
@@ -24,12 +24,13 @@ function navHeadBandDisplay() {
       navStep[i].classList.add("otherLabel");
     }
     console.log(formHeadBand);
-
-    formHeadBand.addEventListener("click", (e) => {
-      let toto = e.target.id;
-      console.log(toto);
-    });
+    console.log(navButtons[0]);
   }
+
+  formHeadBand.addEventListener("click", (e) => {
+    let toto = e.target.id;
+    console.log(toto);
+  });
 }
 
 window.addEventListener("load", () => {

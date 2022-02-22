@@ -23,8 +23,11 @@ h1 {
   border-bottom: 5px solid white;
 }
 
-.formHeadBand {
+.navHeadBand {
   width: 70%;
+}
+
+.formHeadBand {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -60,7 +63,15 @@ input[type="radio"] + label:hover {
   filter: blur();
 }
 
-input[type="radio"]:checked + label {
+/* input[type="radio"]:checked + label {
+  background-color: white;
+  color: var(--main-bg-color);
+  transform: scale(1.1);
+  filter: brightness(120%);
+  filter: blur();
+} */
+
+.labelActive {
   background-color: white;
   color: var(--main-bg-color);
   transform: scale(1.1);
@@ -81,6 +92,53 @@ input[type="radio"]:checked + label {
 }
 .otherLabel {
   clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
+}
+
+.mainContent {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around; */
+  color: white;
+  margin: 15px 10px;
+  padding: 50px 50px 200px 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+.mainContent h3 p {
+  width: 70%;
+}
+
+.validation input[type="button"] {
+  width: 8%;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-bg-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.validation input[type="button"]:hover {
+  transform: scale(1.1);
+}
+
+.validation input[type="button"]:active {
+  transform: scale(1.2);
+  filter: brightness(130%);
+  background-color: #00a47a;
 }
 
 /* #formulaireDPE_GLS {

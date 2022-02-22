@@ -32,7 +32,22 @@ function NavListener() {
   }
 }
 
+function stepDisplay(selecLabel) {
+  // on crée une fonction avec en entrée le label
+  // Mise à jour de la NavBar
+  const activeLabel = selecLabel;
+  const activeRadio = activeLabel.replace("label", "step");
+  const activeLabelHtml = document.getElementById(activeLabel);
+  //console.log(activeLabelHtml);
+  const activeRadioHtml = document.getElementById(activeRadio);
+  //console.log(activeRadioHtml);
+
+  // => affiche l'information ou le formulaire
+  // valide le formulaire avec un bouton "suivant" à cocher
+}
+
 window.addEventListener("load", () => {
   navHeadBandDisplay();
   NavListener();
+  stepDisplay("label0");
 });

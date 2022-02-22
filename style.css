@@ -61,8 +61,8 @@ input[type="radio"] + label:hover {
 }
 
 input[type="radio"]:checked + label {
-  background-color: #00a47b;
-  color: rgb(75, 40, 240);
+  background-color: white;
+  color: var(--main-bg-color);
   transform: scale(1.1);
   filter: brightness(120%);
   filter: blur();
